@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 //Display todo
-app.get("/", async (req,res)=>{
+app.get("/methods", async (req,res)=>{
     try{
         const qry = await pool.query("SELECT * FROM main_data;");
         res.json(qry.rows);

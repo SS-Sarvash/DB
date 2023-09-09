@@ -35,10 +35,11 @@ const Inserter = ({ adder,data }) => {
             <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
                 <h1 className="text-2xl font-semibold mb-6 text-center">Main Table</h1>
                 <form onSubmit={HandleSubmission}>
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                         <label htmlFor="location" className="block text-sm font-medium text-gray-700">
                             Location
                         </label>
+                        
                         <input 
                         id="loc"
                         type="text" 
@@ -52,19 +53,24 @@ const Inserter = ({ adder,data }) => {
                         {unique_location.map((loc)=>(<option value={loc} >{loc}</option>))}
 
                         </datalist> 
+                       
+                    </div> */}
+ <select className="w-full border rounded py-2 px-3 mt-1 focus:outline-none focus:ring focus:border-blue-300 absolute top-0 opacity-0"> 
+<option>hello world</option>
+</select>
 
-                    </div>
                     <div className="mb-4">
                         <label htmlFor="component" className="block text-sm font-medium text-gray-700">
                             Component
                         </label>
                         <input 
-                        id="comp"
+                        // id="comp"
                         type="text" 
                         list="component" 
                         placeholder="Enter Component" 
                         className="w-full border rounded py-2 px-3 mt-1 focus:outline-none focus:ring focus:border-blue-300"
                         onChange={(e) => setComponent(e.target.value)}
+                        
                         required/>
                         <datalist id="component" >
 
